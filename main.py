@@ -30,7 +30,7 @@ def count_currency():
         result_label.config(text=round(data_result["result"], 2))
         notification_label.config(text="")
     except:
-        notification_label.config(text="Please input amount.")
+        notification_label.config(text="Zadej částku.")
 
 
 # User input
