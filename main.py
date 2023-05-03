@@ -1,5 +1,6 @@
 import requests
 from tkinter import *
+from api_key import api_key
 
 # Colors
 main_color = "#07018d"
@@ -22,7 +23,7 @@ def count_currency():
         url = f"https://api.apilayer.com/exchangerates_data/convert?to={currency2}&from={currency1}&amount={amount}"
         payload = {}
         headers= {
-        "apikey": "sdQL25eQOZxFT9gk8eCjXWaljBBaA0A7"
+        "apikey": api_key
         }
         response = requests.request("GET", url, headers=headers, data=payload)
         response.raise_for_status()
@@ -35,7 +36,7 @@ def count_currency():
 
 # User input
 user_input = Entry(width=20, font=("Arial", 12), justify=CENTER)
-user_input.insert(0, "0")
+user_input.insert(0, "")
 user_input.grid(row=0, column=0, padx=10, pady=(10, 0))
 
 # Drop down currency 1
