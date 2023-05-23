@@ -42,13 +42,13 @@ user_input.grid(row=0, column=0, padx=10, pady=(10, 0))
 # Drop down currency 1
 drop_down_from = StringVar(window)
 drop_down_from.set("EUR") 
-drop_down_from_option = OptionMenu(window, drop_down_from, "CZK", "EUR", "USD")
+drop_down_from_option = OptionMenu(window, drop_down_from, "CZK", "EUR", "USD", "PLN")
 drop_down_from_option.grid(row=0, column=1, padx=10, pady=(10, 0))
 
 # Drop down currency 2
 drop_down_to = StringVar(window)
 drop_down_to.set("CZK")
-drop_down_to_option = OptionMenu(window, drop_down_to, "CZK", "EUR", "USD")
+drop_down_to_option = OptionMenu(window, drop_down_to, "CZK", "EUR", "USD", "PLN")
 drop_down_to_option.grid(row=1, column=1, padx=5, pady=(10, 0))
 
 # Button
