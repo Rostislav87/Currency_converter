@@ -8,10 +8,9 @@ main_color = "#07018d"
 # Window
 window = Tk()
 window.title("Převod měn verze 1.0.0")
-window.minsize(400, 120)
+window.geometry("550x120+1000+200")
 window.resizable(True, True)
 window.config(bg=main_color)
-window.iconbitmap("icon.ico")
 
 
 # Function count currency
@@ -35,7 +34,7 @@ def count_currency():
 
 
 # User input
-user_input = Entry(width=20, font=("Arial", 12), justify=CENTER)
+user_input = Entry(width=20, font=("Arial", 20), justify=CENTER)
 user_input.insert(0, "")
 user_input.grid(row=0, column=0, padx=10, pady=(10, 0))
 
@@ -49,18 +48,18 @@ drop_down_from_option.grid(row=0, column=1, padx=10, pady=(10, 0))
 drop_down_to = StringVar(window)
 drop_down_to.set("CZK")
 drop_down_to_option = OptionMenu(window, drop_down_to, "CZK", "EUR", "USD", "PLN")
-drop_down_to_option.grid(row=1, column=1, padx=5, pady=(10, 0))
+drop_down_to_option.grid(row=1, column=1, padx=10, pady=(10, 0))
 
 # Button
-count_button = Button(text="Přepočítej", font=("Arial", 12), command=count_currency)
+count_button = Button(text="Přepočítej", font=("Arial", 20), command=count_currency)
 count_button.grid(row=0, column=2, padx=10, pady=(10, 0))
 
 # Laber for result
-result_label = Label(text="0", bg=main_color, fg="white", font=("Arial", 12))
+result_label = Label(text="0", bg=main_color, fg="white", font=("Arial", 20))
 result_label.grid(row=1, column=0)
 
 # Laber for notification
-notification_label = Label(bg=main_color, fg="white", font=("Arial", 12))
+notification_label = Label(bg=main_color, fg="white", font=("Arial", 20))
 notification_label.grid(row=2, column=0)
 
 # Main cycle
